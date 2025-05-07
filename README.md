@@ -1,50 +1,75 @@
-# Welcome to your Expo app 👋
+# MaplePass 🍁
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**MaplePass** is a mobile app designed to help users prepare for the Canadian Citizenship Exam.
 
-## Get started
+Built with:
+- **React Native** (Expo)
+- **TypeScript**
+- **React Navigation**
 
-1. Install dependencies
+---
+
+## 🚀 Get Started
+
+1. Install dependencies:
 
    ```bash
    npm install
    ```
 
-2. Start the app
+2. Start the development server:
 
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+   You'll then have the option to open the app in:
+   - a [Development Build](https://docs.expo.dev/develop/development-builds/introduction/)
+   - an [Android Emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
+   - an [iOS Simulator](https://docs.expo.dev/workflow/ios-simulator/)
+   - the [Expo Go](https://expo.dev/go) app (for physical device testing)
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 📂 Project Structure
 
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```
+/app
+  /screens        # App screens (Home, Study, Tests, Flashcards, Progress)
+  /components     # Reusable UI components
+  /navigation     # Navigation setup (React Navigation stacks)
+  /data           # Local static data (e.g., chapters, flashcards)
+  /assets         # Images, icons, etc.
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+## 📌 Features Overview
 
-To learn more about developing your project with Expo, look at the following resources:
+- 📖 Study the Discover Canada guidebook
+- 🧠 Practice tests (free + premium unlock)
+- 👏 Flashcards for quick memorization
+- 📈 Track study and test progress
+- 🎖️ Fun passport-themed gamification
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+---
 
-## Join the community
+## 🛠️ Tech Stack
 
-Join our community of developers creating universal apps.
+- **React Native** with **Expo** for cross-platform development
+- **TypeScript** for safer, scalable code
+- **React Navigation** for routing
+- **Context API** (or state manager) for global app state (planned)
+- **In-App Purchases** integration (planned for premium unlock)
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+---
+
+## 🤝 Contributing
+
+Coming soon — basic contribution guidelines!
+
+---
+
+## 📜 License
+
+This project is currently private. Licensing to be decided before launch.
