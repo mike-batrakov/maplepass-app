@@ -1,7 +1,7 @@
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 
-import StudyScreen from '../screens/StudyScreen';
+import StudyScreen from '../screens/Common/StudyScreen';
 
 export default function StudyPage() {
   return (
