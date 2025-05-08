@@ -1,9 +1,35 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
+import { ChapterList } from '../components/ChapterList';
 import { ThemedText } from '../components/ThemedText';
 import { ThemedView } from '../components/ThemedView';
 
+type Chapter = {
+  id: number;
+  title: string;
+  description: string;
+};
+
 export default function StudyScreen() {
+  const [chapters, setChapters] = useState<Chapter[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const loadChapters = async () => {
+      try {
+        // Load chapters from our JSON file
+        const chaptersData = require('../data/chapters.json');
+        setChapters(chaptersData.chapters);
+      } catch (error) {
+        console.error('Failed to load chapters:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadChapters();
+  }, []);
+
   return (
     <ThemedView style={styles.container}>
       <ScrollView contentContainerStyle={styles.contentContainer}>
@@ -13,13 +39,12 @@ export default function StudyScreen() {
         </ThemedText>
 
         <ThemedText style={styles.sectionTitle}>Study Modules</ThemedText>
-        <ThemedText style={styles.paragraph}>
-          • Chapter 1: Rights and Responsibilities{'\n'}
-          • Chapter 2: Who We Are{'\n'}
-          • Chapter 3: Canada's History{'\n'}
-          • Chapter 4: Modern Canada{'\n'}
-          • Chapter 5: How Canadians Govern Themselves
-        </ThemedText>
+
+        {loading ? (
+          <ThemedText>Loading chapters...</ThemedText>
+        ) : (
+          <ChapterList chapters={chapters} />
+        )}
       </ScrollView>
     </ThemedView>
   );
