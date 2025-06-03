@@ -20,7 +20,7 @@ export default function StudyScreen() {
     const loadChapters = async () => {
       try {
         // Load chapters from our JSON file
-        const chaptersData = require('../data/chapters.json');
+        const chaptersData = require('../../data/chapters.json');
         setChapters(chaptersData.chapters);
       } catch (error) {
         console.error('Failed to load chapters:', error);
